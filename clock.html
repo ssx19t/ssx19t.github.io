@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <script>
+      function onload() {
+        var params = (new URL(document.location)).searchParams;
+        var bg = params.get('img');
+        var now = new Date();
+        var month = now.getMonth() + 1;
+        var date = now.getDate();
+        var date4 = ("0" + month).slice(-2) + ("0" + date).slice(-2);
+      }
+      function showClock() {
+        var now = new Date();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var h1 = hour % 10;
+        var h10 = (hour - h1) / 10;
+        var m1 = minute % 10;
+        var m10 = (minute - m1) / 10;
+        document.getElementById("h10").innerHTML = h10;
+        document.getElementById("h1").innerHTML = h1;
+        document.getElementById("m10").innerHTML = m10;
+        document.getElementById("m1").innerHTML = m1;
+      }
+      setInterval('showClock()', 1000)
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Noto+Sans+JP:wght@500;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      body {
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 4vw 15vw 70vw 7vw 4vw;
+        grid-template-rows: 3vh 12vh 72vh 10vh 3vh;
+      }
+      #clock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        text-align: center;
+        color: #000;
+        background-color: #ffffffcc;
+        margin: 0;
+        padding: 6vw;
+        border-radius: 6vw;
+      }
+      #h10, #h1, #m10, #m1 {
+        display: inline-block;
+        font-size: 30vw;
+        width: 20vw;
+        min-width: 20vw;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      #colon {
+        display: inline-block;
+        font-size: 24vw;
+        margin: 0;
+        padding: 0;
+        -webkit-animation:blink 2s ease-in-out infinite alternate;
+        -moz-animation:blink 2s ease-in-out infinite alternate;
+        animation:blink 2s ease-in-out infinite alternate;
+      }
+      @-webkit-keyframes blink{
+          0% {opacity:0;}
+          24% {opacity:0;}
+          26% {opacity:1;}
+          74% {opacity:1;}
+          76% {opacity:0;}
+          100% {opacity:0;}
+      }
+      @-moz-keyframes blink{
+          0% {opacity:0;}
+          24% {opacity:0;}
+          26% {opacity:1;}
+          74% {opacity:1;}
+          76% {opacity:0;}
+          100% {opacity:0;}
+      }
+      @keyframes blink{
+          0% {opacity:0;}
+          24% {opacity:0;}
+          26% {opacity:1;}
+          74% {opacity:1;}
+          76% {opacity:0;}
+          100% {opacity:0;}
+      }
+    </style>
+  </head>
+  <body onload="javascript:onload()">
+    <div id="clock">
+      <div id="h10"></div>
+      <div id="h1"></div>
+      <div id="colon">:</div>
+      <div id="m10"></div>
+      <div id="m1"></div>
+    </div>
+  </body>
+</html>
