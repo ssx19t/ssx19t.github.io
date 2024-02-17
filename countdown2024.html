@@ -10,12 +10,29 @@
 
 * {
     text-align: center;
-    font-family: 'Inter', 'Noto Sans JP';
+    font-family: 'Zenfit Sans', 'Inter', 'Noto Sans JP';
 }
 
 body {
     margin: 0;
     padding: 0;
+}
+
+#wrapper {
+    width: 100svw;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    padding-top: 4.8vw;
+}
+
+h1 {
+    font-size: 4.8vw;
+    margin: 0;
+    padding: 1.2vw 0;
 }
 
 #count {
@@ -24,38 +41,54 @@ body {
     align-items: baseline;
 }
 
-#hh,
+#hh {
+    font-size: 6vw;
+    margin-right: 1.2vw;
+}
 #mm,
 #ss {
-    font-size: 1.6em;
-    width: 1.8em;
+    font-size: 6vw;
+    width: 8.4vw;
 }
 
 #ms {
-    font-size: 1.2em;
-    width: 2.7em;
+    font-size: 4.8vw;
+    width: 9.6vw;
 }
 
 .text {
-    font-size: 1.2em;
+    font-size: 3.6vw;
 }
+
+#footer {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#about {
+    font-size: min(3.2vw, 36px);
+    padding-bottom: 3.6vw;
+}
+
     </style>
     <script>
 function showClock() {
     const now = new Date();
-    const target = new Date(2024, 0, 1, 0, 0);
+    const target = new Date(2024, 2, 26, 9, 0);
     const restMesc = target - now;
     const rest = new Date(restMesc);
     const msec = rest.getMilliseconds();
     const sec = rest.getSeconds();
     const min = rest.getMinutes();
     const hrs = (restMesc - msec - sec * 1000 - min * 1000 * 60) / (1000 * 60 * 60);
-    document.getElementById("hh").innerHTML = ('0' + hrs).slice(-2);
+    document.getElementById("hh").innerHTML = hrs;
     document.getElementById("mm").innerHTML = ('0' + min).slice(-2);
     document.getElementById("ss").innerHTML = ('0' + sec).slice(-2);
     document.getElementById("ms").innerHTML = ('0' + msec).slice(-3);
     if (rest < 0) {
-        document.getElementById("content").innerHTML = '<h1>Happy New Year!</h1>';
+        document.getElementById("content").innerHTML = '<h1>期末試験当日です。頑張りましょう！</h1>';
     }
 }
 setInterval('showClock()', 67)
@@ -63,20 +96,24 @@ setInterval('showClock()', 67)
 </head>
 
 <body>
-    <div id="content">
-        <h1>2024年まであと</h1>
-        <div id="count">
-            <div id="hh">23</div>
-            <div class="text">時間</div>
-            <div id="mm">59</div>
-            <div class="text">分</div>
-            <div id="ss">59</div>
-            <div class="text">秒</div>
-            <div id="ms">999</div>
+    <div id="wrapper">
+        <div id="content">
+            <h1>期末試験まであと</h1>
+            <div id="count">
+                <div id="hh">23</div>
+                <div class="text">時間</div>
+                <div id="mm">59</div>
+                <div class="text">分</div>
+                <div id="ss">59</div>
+                <div class="text">秒</div>
+                <div id="ms">999</div>
+            </div>
         </div>
-        <p>
-            <a href="https://x.com/qrtxas">X @qrtxas</a>
-        </p>
+        <div id="footer">
+            <div id="about">
+                <a href="https://x.com/qrtxas">X @qrtxas</a>
+            </div>
+        </div>
     </div>
 </body>
 
