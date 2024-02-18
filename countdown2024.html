@@ -26,13 +26,13 @@ body {
 }
 
 #content {
-    padding-top: 4.8vw;
+    padding-top: 3.6vw;
 }
 
 h1 {
     font-size: 4.8vw;
     margin: 0;
-    padding: 1.2vw 0;
+    padding: 2.4vw 0;
 }
 
 #count {
@@ -42,22 +42,22 @@ h1 {
 }
 
 #hh {
-    font-size: 6vw;
-    margin-right: 1.2vw;
+    font-size: 9vw;
+    margin-right: 1.8vw;
 }
 #mm,
 #ss {
-    font-size: 6vw;
-    width: 8.4vw;
+    font-size: 9vw;
+    width: 12.6vw;
 }
 
 #ms {
-    font-size: 4.8vw;
-    width: 9.6vw;
+    font-size: 7.2vw;
+    width: 14.4vw;
 }
 
 .text {
-    font-size: 3.6vw;
+    font-size: 5.4vw;
 }
 
 #footer {
@@ -76,7 +76,7 @@ h1 {
     <script>
 function showClock() {
     const now = new Date();
-    const target = new Date(2024, 2 - 1, 26, 9, 0);
+    const target = new Date(2024, 1, 26, 9, 0);
     const restMesc = target - now;
     const rest = new Date(restMesc);
     const msec = rest.getMilliseconds();
