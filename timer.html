@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Sans+JP:wght@500&display=swap');
+
+* {
+    text-align: center;
+    font-family: 'Zenfit Sans', 'Inter', 'Noto Sans JP';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 100svw;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    padding-top: 3.6vw;
+}
+
+h1 {
+    font-size: 4.8vw;
+    margin: 0;
+    padding: 2.4vw 0;
+}
+
+#count {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+#mm{
+    font-size: 9vw;
+    margin-right: 1.8vw;
+}
+#ss {
+    font-size: 9vw;
+    width: 12.6vw;
+}
+
+#ms {
+    font-size: 7.2vw;
+    width: 14.4vw;
+}
+
+.text {
+    font-size: 5.4vw;
+}
+
+#footer {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#about {
+    font-size: min(3.2vw, 36px);
+    padding-bottom: 3.6vw;
+}
+
+    </style>
+    <script>
+        
+function showClock() {
+    const url = new URL(window.location.href);
+    const mode = url.searchParams.get('m');
+    const start = url.searchParams.get('s');
+    const now = new Date();
+    let targetMin = 0;
+    if (mode == 25) {
+        if (now.getMinutes() < 25) {
+            targetMin = 25;
+        } else if (now.getMinutes() < 30) {
+            targetMin = 30;
+        } else if (now.getMinutes() < 55) {
+            targetMin = 55;
+        } else {
+            targetMin = 60;
+        }
+    } else {
+        if (now.getMinutes() < 50) {
+            targetMin = 50;
+        } else {
+            targetMin = 60;
+        }
+    }
+    console.log();
+    const target = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(), targetMin, 0, 0);
+    const restMesc = target - now;
+    const rest = new Date(restMesc);
+    const sec = rest.getSeconds();
+    const min = rest.getMinutes();
+    document.getElementById("mm").innerHTML = min;
+    document.getElementById("ss").innerHTML = ('0' + sec).slice(-2);
+}
+setInterval('showClock()', 250)
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="content">
+            <div id="count">
+                <div id="mm">59</div>
+                <div class="text">分</div>
+                <div id="ss">59</div>
+                <div class="text">秒</div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="about">
+                <a href="https://x.com/qrtxas">X @qrtxas</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
