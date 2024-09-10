@@ -6,13 +6,29 @@
     <title>qrtxs</title>
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,600&family=Outfit:wght@100..900&display=swap');
+:root {
+  --text: #000;
+  --bg: #fff;
+  --box-bg: #eee;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #fff;
+    --bg: #000;
+    --box-bg: #333;
+  }
+}
 * {
     margin: 0;
     padding: 0;
     font-family: "Outfit", sans-serif;
+    color: var(--text);
+}
+body {
+    background-color: var(--bg);
 }
 a {
-    color: black;
+    color: var(--text);
 }
 h2 {
     text-align: center;
@@ -56,7 +72,7 @@ h3 {
     padding-bottom: 0.6rem;
 }
 .link {
-    background: #eee;
+    background: var(--box-bg);
     border-radius: 4px;
     width: 364px;
     margin: 8px 8px;
@@ -103,7 +119,7 @@ h3 {
 }
 .youtube_video {
     width: min(calc(100vw - 32px), 772px);
-    height: calc((min(calc(100vw - 32px), 772px) - 8px) * 0.45);
+    height: calc((min(calc(100vw - 32px), 772px) - 8px) * 9 / 16);
     display: flex;
     align-items: center;
     justify-content: center;
