@@ -9,13 +9,15 @@
 :root {
   --text: #000;
   --bg: #fff;
+  --box-text: #000;
   --box-bg: #eee;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #eee;
     --bg: #000;
-    --box-bg: #333;
+    --box-text: #000;
+    --box-bg: #999;
   }
 }
 * {
@@ -107,6 +109,9 @@ h3 {
 }
 .link_title {
     font-weight: bold;
+}
+#list div, a {
+    color: var(--box-text);
 }
 #works, #tags {
     display: flex;
