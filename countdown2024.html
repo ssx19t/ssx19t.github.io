@@ -76,7 +76,7 @@ h1 {
     <script>
 function showClock() {
     const now = new Date();
-    const target = new Date(2024, 9, 22, 8, 15);
+    const target = new Date(2024, 10, 25, 9, 0);
     const restMesc = target - now;
     const rest = new Date(restMesc);
     const msec = rest.getMilliseconds();
@@ -88,7 +88,7 @@ function showClock() {
     document.getElementById("ss").innerHTML = ('0' + sec).slice(-2);
     document.getElementById("ms").innerHTML = ('0' + msec).slice(-3);
     if (rest < 0) {
-        document.getElementById("content").innerHTML = '<h1>修学旅行当日です！！</h1>';
+        document.getElementById("content").innerHTML = '<h1>中間試験当日です！！</h1>';
     }
 }
 setInterval('showClock()', 67)
@@ -98,7 +98,7 @@ setInterval('showClock()', 67)
 <body>
     <div id="wrapper">
         <div id="content">
-            <h1>修学旅行まであと</h1>
+            <h1>後期中間試験まであと</h1>
             <div id="count">
                 <div id="hh">23</div>
                 <div class="text">時間</div>
