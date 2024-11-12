@@ -1,0 +1,342 @@
+[
+    {
+        "id": 0,
+        "title": "アイドル",
+        "artist": "YOASOBI",
+        "key": 0,
+        "bpm": 166,
+        "chord": [
+            "FM7",
+            "",
+            "Em7",
+            "",
+            "Am7",
+            "",
+            "C",
+            ""
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Subtitle",
+        "artist": "Official髭男dism",
+        "key": 6,
+        "bpm": 130,
+        "chord": [
+            "FM7",
+            "",
+            "G6",
+            "",
+            "E7-9",
+            "",
+            "Am7",
+            ""
+        ]
+    },
+    {
+        "id": 2,
+        "title": "怪獣の花唄",
+        "artist": "Vaundy",
+        "key": 2,
+        "bpm": 150,
+        "chord": [
+            "Fadd9",
+            "",
+            "G",
+            "",
+            "Am7",
+            "",
+            "Cadd9",
+            ""
+        ]
+    },
+    {
+        "id": 3,
+        "title": "KICK BACK",
+        "artist": "米津玄師",
+        "key": 4,
+        "bpm": 204,
+        "chord": [
+            "Am7",
+            "",
+            "Dm7",
+            "",
+            "E",
+            "",
+            "Am7",
+            ""
+        ]
+    },
+    {
+        "id": 4,
+        "title": "第ゼロ感",
+        "artist": "10-FEET",
+        "key": 5,
+        "bpm": 150,
+        "chord": [
+            "Am",
+            "",
+            "C/G",
+            "",
+            "F#m7-5",
+            "",
+            "F",
+            ""
+        ]
+    },
+    {
+        "id": 5,
+        "title": "新時代 (ウタ from ONE PIECE FILM RED)",
+        "artist": "Ado",
+        "key": 7,
+        "bpm": 175,
+        "chord": [
+            "Dm7",
+            "",
+            "FM9",
+            "",
+            "Am7",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 6,
+        "title": "ダンスホール",
+        "artist": "Mrs.GREEN APPLE",
+        "key": 2,
+        "bpm": 125,
+        "chord": [
+            "F",
+            "",
+            "C/G",
+            "",
+            "Am7",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 7,
+        "title": "W / X / Y",
+        "artist": "Tani Yuuki",
+        "key": 2,
+        "bpm": 71,
+        "chord": [
+            "Am",
+            "",
+            "F",
+            "",
+            "G",
+            "",
+            "C",
+            ""
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Overdose",
+        "artist": "なとり",
+        "key": 7,
+        "bpm": 118,
+        "chord": [
+            "FM7",
+            "",
+            "E7",
+            "",
+            "Am7",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 9,
+        "title": "美しい鰭",
+        "artist": "スピッツ",
+        "key": 1,
+        "bpm": 98,
+        "chord": [
+            "F",
+            "",
+            "C",
+            "",
+            "G",
+            "",
+            "Am",
+            ""
+        ]
+    },
+    {
+        "id": 10,
+        "title": "ミックスナッツ",
+        "artist": "Official髭男dism",
+        "key": 6,
+        "bpm": 150,
+        "chord": [
+            "C",
+            "",
+            "E7",
+            "",
+            "G/A",
+            "",
+            "Gm7",
+            "Bb/C"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "シンデレラボーイ",
+        "artist": "Saucy Dog",
+        "key": 9,
+        "bpm": 108,
+        "chord": [
+            "F",
+            "",
+            "G",
+            "",
+            "C",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 12,
+        "title": "水平線",
+        "artist": "back number",
+        "key": 10,
+        "bpm": 73,
+        "chord": [
+            "C",
+            "",
+            "FM7",
+            "",
+            "G",
+            "",
+            "G#dim",
+            ""
+        ]
+    },
+    {
+        "id": 13,
+        "title": "ドライフラワー",
+        "artist": "優里",
+        "key": 7,
+        "bpm": 74,
+        "chord": [
+            "F",
+            "",
+            "G",
+            "",
+            "E7+9",
+            "",
+            "Am7",
+            ""
+        ]
+    },
+    {
+        "id": 14,
+        "title": "祝福",
+        "artist": "YOASOBI",
+        "key": 7,
+        "bpm": 170,
+        "chord": [
+            "FM7",
+            "",
+            "G7",
+            "",
+            "Em7",
+            "",
+            "A7",
+            ""
+        ]
+    },
+    {
+        "id": 15,
+        "title": "アイラブユー",
+        "artist": "back number",
+        "key": 1,
+        "bpm": 78,
+        "chord": [
+            "FM7",
+            "",
+            "G",
+            "",
+            "C",
+            "",
+            "Am7",
+            ""
+        ]
+    },
+    {
+        "id": 16,
+        "title": "唱",
+        "artist": "Ado",
+        "key": 6,
+        "bpm": 132,
+        "chord": [
+            "Am",
+            "",
+            "G",
+            "",
+            "FM7",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "id": 17,
+        "title": "絆ノ奇跡",
+        "artist": "MAN WITH A MISSION×milet",
+        "key": 10,
+        "bpm": 170,
+        "chord": [
+            "F",
+            "",
+            "G",
+            "",
+            "Am",
+            "",
+            "C",
+            ""
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Soranji",
+        "artist": "Mrs.GREEN APPLE",
+        "key": 5,
+        "bpm": 78,
+        "chord": [
+            "C/E",
+            "",
+            "FM7",
+            "",
+            "G",
+            "",
+            "G#dim",
+            ""
+        ]
+    },
+    {
+        "id": 19,
+        "title": "青と夏",
+        "artist": "Mrs.GREEN APPLE",
+        "key": 4,
+        "bpm": 185,
+        "chord": [
+            "C",
+            "",
+            "G/B",
+            "",
+            "Am",
+            "",
+            "C/G",
+            ""
+        ]
+    }
+]
