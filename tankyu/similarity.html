@@ -72,7 +72,7 @@
             if (song1Data && song2Data) {
               const a = song1Data.chord;
               const b = song2Data.chord;
-              document.getElementById('result').innerHTML = song1Data.title + ' と ' + song2Data.title + ' のコード進行の類似度は ' + (Math.round(similarity(a, b) * 10000) / 10000) + ' です。';
+              document.getElementById('result').innerHTML = song1Data.title + ' と ' + song2Data.title + ' のコード進行の類似度は <div id="similarity-result">' + (Math.round(similarity(a, b) * 10000) / 10000) + '</div> です。';
               console.log('Chord progression similarity');
               document.getElementById('select').innerHTML = '';
               document.getElementById('back').innerHTML = '<a href="similarity.html">戻る</a>';
