@@ -69,4 +69,5 @@ function similarity(a, b) {
 
     return filledChordP1.reduce((sum, chord, i) => sum + chordSimilarity(chord, filledChordP2[i]), 0) / filledChordP1.length;
   }
+  return chordProgressionSimilarity(a, b);
 }
