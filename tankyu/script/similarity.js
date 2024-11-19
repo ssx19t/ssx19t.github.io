@@ -1,28 +1,28 @@
 function similarity(a, b) {
-    const NOTE_MAP = { 'C': 0, 'D': 2, 'E': 4, 'F': 5, 'G': 7, 'A': 9, 'B': 11 };
-    
-    const parseNum = (onmei, i) => {
-      let num = NOTE_MAP[onmei.charAt(0)] ?? null;
-      if (num === null) return null;
-  
-      num += i + (onmei.includes('#') ? 1 : 0) - (onmei.includes('b') ? 1 : 0);
-      return num % 12;
-    }
-  
-    const parseTriad = (chordName) => {
-      return chordName.replace(/(add9|M9|\+9|M7|7|69|9|dim)/g, match => (match === 'dim' ? 'm-5' : ''));
-    }
-  
-    const PATTERN_MAP = {
-      'sus2': [0, 2, 7],
-      'sus4': [0, 5, 7],
-      'aug': [0, 4, 8],
-      'm-5': [0, 3, 6],
-      '-5': [0, 4, 6],
-      'm': [0, 3, 7],
-      'default': [0, 4, 7],
-    };
-  
+  const NOTE_MAP = { 'C': 0, 'D': 2, 'E': 4, 'F': 5, 'G': 7, 'A': 9, 'B': 11 };
+
+  const parseNum = (onmei, i) => {
+    let num = NOTE_MAP[onmei.charAt(0)] ?? null;
+    if (num === null) return null;
+
+    num += i + (onmei.includes('#') ? 1 : 0) - (onmei.includes('b') ? 1 : 0);
+    return num % 12;
+  }
+
+  const parseTriad = (chordName) => {
+    return chordName.replace(/(add9|M9|\+9|M7|7|69|9|dim)/g, match => (match === 'dim' ? 'm-5' : ''));
+  }
+
+  const PATTERN_MAP = {
+    'sus2': [0, 2, 7],
+    'sus4': [0, 5, 7],
+    'aug': [0, 4, 8],
+    'm-5': [0, 3, 6],
+    '-5': [0, 4, 6],
+    'm': [0, 3, 7],
+    'default': [0, 4, 7], // デフォルトは三和音 (ルート、第3、第5音)
+  };
+
   const kouseion = (chord) => {
     const chordName = parseTriad(chord);
     let count = Array(12).fill(0);
@@ -69,3 +69,4 @@ function similarity(a, b) {
 
     return filledChordP1.reduce((sum, chord, i) => sum + chordSimilarity(chord, filledChordP2[i]), 0) / filledChordP1.length;
   }
+}
