@@ -177,10 +177,10 @@
                         document.getElementsByClassName('schedule')[i].style.display = 'none';
                     } else {
                         const rest = new Date(restMesc);
-                        const msec = rest.getMilliseconds();
-                        const sec = rest.getSeconds();
-                        const min = rest.getMinutes();
-                        const hr = rest.getHours();
+                        const msec = rest.getUTCMilliseconds();
+                        const sec = rest.getUTCSeconds();
+                        const min = rest.getUTCMinutes();
+                        const hr = rest.getUTCHours();
                         const day = Math.floor(restMesc / (1000 * 60 * 60 * 24));
                         document.getElementsByClassName("d")[i].innerHTML = day;
                         document.getElementsByClassName("hh")[i].innerHTML = ('0' + hr).slice(-2);
