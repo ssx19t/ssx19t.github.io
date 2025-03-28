@@ -6,97 +6,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown</title>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Sans+JP:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Sans+JP:wght@500&display=swap');
 
-* {
-    text-align: center;
-    font-family: 'Zenfit Sans', 'Inter', 'Noto Sans JP';
-}
 
-body {
-    margin: 0;
-    padding: 0;
-}
+        :root {
+            --content-width: min(640px, 96svw);
+            --s-display: block;
+        }
 
-#wrapper {
-    width: 100svw;
-    height: 100svh;
-    display: flex;
-    flex-direction: column;
-}
+        * {
+            font-family: 'fot-tsukuardgothic-std', 'Inter', 'Noto Sans JP', sans-serif;
+            line-height: 1.2em;
+        }
 
-#content {
-    padding-top: 3.6vw;
-}
+        body {
+            margin: 0;
+            padding: 0;
+        }
 
-h1 {
-    font-size: 4.2vw;
-    margin: 0;
-    padding: 2.4vw 0;
-}
+        a,
+        a:visited {
+            color: #226baf;
+        }
 
-#count {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-}
+        #wrapper {
+            width: var(--content-width);
+            height: 100svh;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
 
-#d {
-    font-size: 9vw;
-    margin-right: 1.8vw;
-}
+        #content {
+            padding-top: calc(0.036 * var(--content-width));
+            width: fit-content;
+            margin: auto;
+        }
 
-#hh, 
-#mm,
-#ss {
-    font-size: 9vw;
-    width: 12.6vw;
-}
+        .schedule {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: calc(0.048 * var(--content-width));
+        }
 
-#ms {
-    font-size: 7.2vw;
-    width: 14.4vw;
-    display: none;
-}
+        .title {
+            font-size: calc(0.036 * var(--content-width));
+            align-self: baseline;
+        }
 
-.text {
-    font-size: 5.4vw;
-}
+        .count {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+        }
 
-#footer {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
+        .count div {
+            text-align: center;
+        }
 
-#about {
-    font-size: min(3.2vw, 36px);
-    padding-bottom: 3.6vw;
-}
+        .d {
+            font-size: calc(0.09 * var(--content-width));
+            width: calc(0.156 * var(--content-width));
+            margin-right: calc(0.018 * var(--content-width));
+        }
 
+        .hh,
+        .mm,
+        .ss {
+            font-size: calc(0.09 * var(--content-width));
+            width: calc(0.128 * var(--content-width));
+        }
+
+        .ms {
+            font-size: calc(0.072 * var(--content-width));
+            width: calc(0.144 * var(--content-width));
+            display: none;
+        }
+
+        .text {
+            font-size: calc(0.054 * var(--content-width));
+        }
+
+        .ss,
+        .ss-text {
+            display: var(--s-display);
+        }
+
+        #footer {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        #about {
+            font-size: calc(0.032 * var(--content-width));
+            padding-bottom: 3.2vw;
+        }
+
+        #about p {
+            text-align: center;
+            margin: 0 1.8em;
+        }
     </style>
     <script>
-function showClock() {
-    const now = new Date();
-    const target = new Date(2026, 0, 17, 9, 30);
-    const restMesc = target - now;
-    const rest = new Date(restMesc);
-    const msec = rest.getMilliseconds();
-    const sec = rest.getSeconds();
-    const min = rest.getMinutes();
-    const hr = rest.getHours();
-    const day = Math.floor(restMesc / (1000 * 60 * 60 * 24));
-    document.getElementById("d").innerHTML = day;
-    document.getElementById("hh").innerHTML = ('0' + hr).slice(-2);
-    document.getElementById("mm").innerHTML = ('0' + min).slice(-2);
-    document.getElementById("ss").innerHTML = ('0' + sec).slice(-2);
-    document.getElementById("ms").innerHTML = ('0' + msec).slice(-3);
-    if (rest < 0) {
-        document.getElementById("content").innerHTML = '<h1>共通テスト当日です！！</h1>';
-    }
-}
-setInterval('showClock()', 67)
+        (function (d) {
+            var config = {
+                kitId: 'zou0dwx',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <script>
+        const list = [{
+            title: '前期中間試験', date: '2025-05-26-09-00-00'
+        }, {
+            title: '前期期末試験', date: '2025-08-25-09-00-00'
+        }, {
+            title: '第40回蒼碧祭文化部門', date: '2025-09-06-09-00-00'
+        }, {
+            title: '後期中間試験', date: '2025-11-25-09-00-00'
+        }, {
+            title: '令和8年度大学入学共通テスト', date: '2026-01-17-09-30-00'
+        }, {
+            title: '令和8年度国立大学前期試験', date: '2026-02-25-09-00-00'
+        }, {
+            title: '第12回卒業式', date: '2026-03-10-09-00-00'
+        }];
+        window.onload = function () {
+            const urlString = window.location.href;
+            const url = new URL(urlString);
+            const s = url.searchParams.get('s');
+            if (s == 'none') {
+                document.querySelector(':root').style.setProperty('--s-display', 'none');
+                document.getElementById('s-setting').innerHTML = '<a href="./">元に戻す</a>'
+            }
+            let htmlText = '';
+            for (let i = 0; i < list.length; i++) {
+                htmlText += `
+            <div class="schedule">
+                <div class="title">${list[i].title}</div>
+                <div class="count">
+                    <div class="d">364</div>
+                    <div class="text">日</div>
+                    <div class="hh">23</div>
+                    <div class="text">時間</div>
+                    <div class="mm">59</div>
+                    <div class="text">分</div>
+                    <div class="ss">59</div>
+                    <div class="text ss-text">秒</div>
+                    <div class="ms">999</div>
+                </div>
+            </div>`;
+            }
+            document.getElementById('content').innerHTML = htmlText;
+        }
+        function writeCount(list) {
+            for (let i = 0; i < list.length; i++) {
+                if (document.getElementsByClassName('schedule')[i].style.getPropertyValue('display') == 'none') {
+                    // 要素が非表示なら計算しない
+                } else {
+                    const date = list[i].date.split('-');
+                    const now = new Date();
+                    const target = new Date(date[0], date[1] - 1, date[2], date[3], date[4]);
+                    const restMesc = target - now;
+                    if (restMesc < 0) {
+                        // 残り時間が負なら要素を非表示にする
+                        document.getElementsByClassName('schedule')[i].style.display = 'none';
+                    } else {
+                        const rest = new Date(restMesc);
+                        const msec = rest.getMilliseconds();
+                        const sec = rest.getSeconds();
+                        const min = rest.getMinutes();
+                        const hr = rest.getHours();
+                        const day = Math.floor(restMesc / (1000 * 60 * 60 * 24));
+                        document.getElementsByClassName("d")[i].innerHTML = day;
+                        document.getElementsByClassName("hh")[i].innerHTML = ('0' + hr).slice(-2);
+                        document.getElementsByClassName("mm")[i].innerHTML = ('0' + min).slice(-2);
+                        document.getElementsByClassName("ss")[i].innerHTML = ('0' + sec).slice(-2);
+                        document.getElementsByClassName("ms")[i].innerHTML = ('0' + msec).slice(-3);
+                    }
+                }
+            }
+        }
+        setInterval(function () { writeCount(list) }, 331);
     </script>
 </head>
 
@@ -118,7 +213,9 @@ setInterval('showClock()', 67)
         </div>
         <div id="footer">
             <div id="about">
-                ©rfld
+                <p id="s-setting"><a href="./?s=none">秒を非表示にする</a></p>
+                <p>未確定の情報を含みます。</p>
+                <p><a href="/links/">©qrf1d</a> 2025</p>
             </div>
         </div>
     </div>
