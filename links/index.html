@@ -28,6 +28,9 @@
     font-family: "Outfit", 'Noto Sans JP', sans-serif;
     color: var(--text);
 }
+.display-none {
+    display: none;
+}
 body {
     background-color: var(--bg);
 }
@@ -39,11 +42,11 @@ h2 {
     font-weight: 700;
     font-size: 1.8rem;
     text-align: center;
-    margin: 1.6rem 0 0.4rem 0;
+    margin: 1.8rem 0 0.6rem 0;
 }
 h3 {
     font-weight: 600;
-    margin: 0.8rem 0 0.4rem 0;
+    margin: 1.2rem 0 0.4rem 0;
 }
 audio {
     margin-bottom: 0.4rem;
@@ -122,14 +125,24 @@ audio {
 #list div, a {
     color: var(--box-text);
 }
-#works, #tags {
+.work-box, #tags {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: min(calc(100vw - 24px), 780px);
-    margin: auto;
-    padding-bottom: 0.6rem;
+    margin: 0.4rem auto 1.6rem;
+}
+.work-box h3 {
+    text-align: center;
+}
+#custom-break span {
+    display: inline-block;
+}
+.work-box h4 {
+    text-align: center;
+    font-weight: 500;
+    margin: 0.4rem 0 0.4rem 0;
 }
 .youtube_video {
     width: min(calc(100vw - 32px), 772px);
@@ -226,13 +239,33 @@ audio {
         </div>
         <div id="works">
             <h2>WORKS</h2>
-            <h3>学校紹介動画</h3>
-            <div class="youtube_video">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iQpAuTUqxQ4?si=0iglo257ucYJe3Fx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="work-box">
+                <div>
+                    <h3>新規楽曲</h3>
+                    <span>Coming soon ...</span>
+                </div>
+                <div class="display-none">
+                    <h3>
+                        <div id="custom-break"><span>「Sparkle」</span><span>（第40回蒼碧祭文化部門</span><span>テーマソング）</span></div>
+                    </h3>
+                    <h4>作曲・共編曲</h4>
+                    <div class="youtube_video">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
-            <h3>ボツ曲供養コーナー</h3>
-            <audio controls src="/music/KeyE-171-4536.wav" type="audio/wav"></audio>
-            <audio controls src="/music/KeyGb-180-136.wav" type="audio/wav"></audio>
+            <div class="work-box">
+                <h3>学校紹介動画</h3>
+                <h4>作曲・編曲</h4>
+                <div class="youtube_video">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iQpAuTUqxQ4?si=0iglo257ucYJe3Fx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+                <div class="work-box">
+                <h3>ボツ曲供養コーナー</h3>
+                <audio controls src="/music/KeyE-171-4536.wav" type="audio/wav"></audio>
+                <audio controls src="/music/KeyGb-180-136.wav" type="audio/wav"></audio>
+            </div>
         </div>
         <div id="tags">
             <h2>TAGS</h2>
