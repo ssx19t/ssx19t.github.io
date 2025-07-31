@@ -13,6 +13,7 @@
   --bg: #fff;
   --box-text: #000;
   --box-bg: #eee;
+  --button-bg: #333;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -20,6 +21,7 @@
     --bg: #000;
     --box-text: #000;
     --box-bg: #ccc;
+    --button-bg: #bbb;
   }
 }
 * {
@@ -42,7 +44,7 @@ h2 {
     font-weight: 700;
     font-size: 1.8rem;
     text-align: center;
-    margin: 1.8rem 0 0.6rem 0;
+    margin: 2.4rem 0 0.6rem 0;
 }
 h3 {
     font-weight: 600;
@@ -151,6 +153,27 @@ audio {
     align-items: center;
     justify-content: center;
 }
+.comment {
+    margin: 1.2rem 0.8rem 0.8em;
+}
+.button-box {
+    margin: 0.8rem 0;
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+}
+.button-box div {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.8rem 0.3rem;
+    color: var(--bg);
+    background-color: var(--button-bg);
+    border: var(--button-bg) 0px solid;
+    border-radius: 1rem;
+}
+.button-box a {
+    color: var(--bg);
+    text-decoration: none;
+}
     </style>
 </head>
 <body>
@@ -239,27 +262,45 @@ audio {
         </div>
         <div id="works">
             <h2>WORKS</h2>
-            <div class="work-box">
-                <div>
-                    <h3>
-                        <div id="custom-break"><span>「Sparkle」</span><span>（第40回蒼碧祭文化部門</span><span>テーマソング）</span></div>
-                    </h3>
-                    <h4>作曲・共編曲</h4>
-                    
-                        <div class="youtube_video">
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BaoDIcmG04E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                    
+            <div class="work-box" id="sparkle">
+                <h3>
+                    <div id="custom-break"><span>「Sparkle」</span><span>（第40回蒼碧祭文化部門</span><span>テーマソング）</span></div>
+                </h3>
+                <h4>作曲・共編曲</h4>
+                <div class="youtube_video">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BaoDIcmG04E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="comment">
+                    <div>
+                        <p>2025年度、記念すべき40回目の蒼碧祭文化部門のテーマソングとして作曲しました。曲もMVも最高なのでたくさん観て聴いてください！！</p>
+                    </div>
+                    <div class="button-box">
+                        <div><a href="https://youtu.be/BaoDIcmG04E" target="_blank noopener">YouTubeで観る</a></div>
+                        <div class="display-none"><a href="" target="_blank noopener">ストリーミングサービスで聴く（準備中）</a></div>
+                        <div><a href="https://ja.chordwiki.org/wiki/Sparkle+%28%E8%92%BC%E7%A2%A7%E7%A5%AD%E6%96%87%E5%8C%96%E9%83%A8%E9%96%80%E3%83%86%E3%83%BC%E3%83%9E%E3%82%BD%E3%83%B3%E3%82%B0%29" target="_blank noopener">コード譜を見る</a></div>
+                        <div><a href="#sparkle-demo">デモ音源を聴く</a></div>
+                    </div>
                 </div>
             </div>
-            <div class="work-box">
+            <div class="work-box" id="school-introduction">
                 <h3>学校紹介動画</h3>
                 <h4>作曲・編曲</h4>
                 <div class="youtube_video">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iQpAuTUqxQ4?si=0iglo257ucYJe3Fx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iQpAuTUqxQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="comment">
+                    <div class="button-box">
+                        <div><a href="https://youtu.be/iQpAuTUqxQ4" target="_blank noopener">YouTubeで観る</a></div>
+                        <div><a href="https://ja.chordwiki.org/wiki/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%AB%8B%E7%9B%B8%E6%A8%A1%E5%8E%9F%E4%B8%AD%E7%AD%89%E6%95%99%E8%82%B2%E5%AD%A6%E6%A0%A1%E7%B4%B9%E4%BB%8B%E5%8B%95%E7%94%BB+2024" target="_blank noopener">コード譜を見る</a></div>
+                    </div>
                 </div>
             </div>
-                <div class="work-box">
+            <div class="work-box">
+                <h3 id="sparkle-demo">「Sparkle」デモ音源</h3>
+                <h4>2mix</h4>
+                <audio controls src="/music/Sparkle-demo.mp3" type="audio/mp3"></audio>
+                <h4>Instrumental</h4>
+                <audio controls src="/music/Sparkle-demo-inst.mp3" type="audio/mp3"></audio>
                 <h3>ボツ曲供養コーナー</h3>
                 <audio controls src="/music/KeyE-171-4536.wav" type="audio/wav"></audio>
                 <audio controls src="/music/KeyGb-180-136.wav" type="audio/wav"></audio>
