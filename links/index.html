@@ -82,7 +82,7 @@ audio {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: min(calc(100vw - 24px), 780px);
     margin: auto;
     padding-bottom: 0.6rem;
@@ -95,6 +95,9 @@ audio {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.ss, .un, .qx {
+    display: none;
 }
 .icon {
     height: 32px;
@@ -176,6 +179,30 @@ audio {
     text-decoration: none;
 }
     </style>
+    <script>
+        window.onload = function () {
+            const urlString = window.location.href;
+            const url = new URL(urlString);
+            const s = url.searchParams.get('s');
+            const u = url.searchParams.get('u');
+            const q = url.searchParams.get('q');
+            if (s == 1) {
+                document.querySelectorAll('.ss').forEach(el => {
+                    el.style.display = 'flex'
+                });
+            }
+            if (u == 1) {
+                document.querySelectorAll('.un').forEach(el => {
+                    el.style.display = 'flex'
+                });
+            }
+            if (q == 1) {
+                document.querySelectorAll('.qx').forEach(el => {
+                    el.style.display = 'flex'
+                });
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -206,7 +233,7 @@ audio {
                     <div class="description">知り合いのみ</div>
                 </div>
             </div>
-            <!-- <div class="link">
+            <div class="link un">
                 <div class="icon twitter"></div>
                 <div class="text">
                     <div class="link_title">
@@ -214,14 +241,23 @@ audio {
                     </div>
                     <div class="description">大学垢</div>
                 </div>
-            </div> -->
-            <div class="link">
+            </div>
+            <div class="link ss">
                 <div class="icon twitter"></div>
                 <div class="text">
                     <div class="link_title">
                         <a href="https://twitter.com/i/user/1463013592370868225" target="_blank noopener">X (@rekisou59ten)</a>
                     </div>
                     <div class="description">高校垢</div>
+                </div>
+            </div>
+            <div class="link qx">
+                <div class="icon twitter"></div>
+                <div class="text">
+                    <div class="link_title">
+                        <a href="https://twitter.com/i/user/1716132471585275904" target="_blank noopener">X (@qrtxas)</a>
+                    </div>
+                    <div class="description">雑多垢</div>
                 </div>
             </div>
             <div class="link">
@@ -242,7 +278,7 @@ audio {
                     <div class="description">有限回翻訳して日本語を崩壊させる</div>
                 </div>
             </div>
-            <div class="link">
+            <div class="link ss">
                 <div class="icon"></div>
                 <div class="text">
                     <div class="link_title">
