@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,177 +8,214 @@
     <link rel="apple-touch-icon" type="image/png" href="/icon/apple-touch-icon-180x180.png">
     <link rel="icon" type="image/png" href="/icon/icon-192x192.png">
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Noto+Sans+JP:wght@100..900&family=Outfit:wght@100..900&display=swap');
-:root {
-  --text: #000;
-  --bg: #fff;
-  --box-text: #000;
-  --box-bg: #eee;
-  --button-bg: #333;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #eee;
-    --bg: #000;
-    --box-text: #000;
-    --box-bg: #ccc;
-    --button-bg: #bbb;
-  }
-}
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Outfit", 'Noto Sans JP', sans-serif;
-    color: var(--text);
-}
-.display-none {
-    display: none;
-}
-body {
-    background-color: var(--bg);
-}
-a {
-    color: var(--text);
-}
-h2 {
-    font-family: 'Josefin Slab', 'Noto Sans JP';
-    font-weight: 700;
-    font-size: 1.8rem;
-    text-align: center;
-    margin: 2.4rem 0 0.6rem 0;
-}
-h3 {
-    font-weight: 600;
-    margin: 1.2rem 0 0.4rem 0;
-}
-audio {
-    margin-bottom: 0.4rem;
-}
-#header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 16px 0;
-}
-#profile_icon {
-    width: 3rem;
-    height: 3rem;
-}
-#profile_icon img {
-    width: 100%;
-    height: 100%;
-}
-#name {
-    margin: 0 16px;
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-#detail {
-    text-align: center;
-    font-size: 1rem;
-    padding-bottom: 0.6rem;
-}
-#list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    width: min(calc(100vw - 24px), 780px);
-    margin: auto;
-    padding-bottom: 0.6rem;
-}
-.link {
-    background: var(--box-bg);
-    border-radius: 4px;
-    width: 364px;
-    margin: 8px 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.ss, .un, .qx {
-    display: none;
-}
-.icon {
-    height: 32px;
-    width: 32px;
-    margin: 16px;
-    background-size: contain;
-}
-.twitter {
-    background-image: url('/images/x-logo-black.png');
-}
-.instagram {
-    background-image: url('/images/instagram-logo-black.png');
-}
-.discord {
-    background-image: url('/images/discord-logo-black.png');
-    background-repeat: no-repeat;
-    background-position-y: center;
-}
-.text {
-    height: 52px;
-    width: 288px;
-    margin: 6px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.link_title {
-    font-weight: 600;
-}
-#list div, a {
-    color: var(--box-text);
-}
-.work-box, #tags {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: min(calc(100vw - 24px), 780px);
-    margin: 0.4rem auto 1.6rem;
-}
-.work-box h3 {
-    text-align: center;
-}
-#custom-break span {
-    display: inline-block;
-}
-.work-box h4 {
-    text-align: center;
-    font-weight: 500;
-    margin: 0.4rem 0 0.4rem 0;
-}
-.youtube_video {
-    width: min(calc(100vw - 32px), 772px);
-    height: calc((min(calc(100vw - 32px), 772px) - 8px) * 9 / 16);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.comment {
-    margin: 1.2rem 0.8rem 0.8em;
-}
-.button-box {
-    margin: 0.8rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    justify-content: center;
-}
-.button-box div {
-    font-size: 0.9rem;
-    padding: 0.2rem 0.8rem 0.3rem;
-    color: var(--bg);
-    background-color: var(--button-bg);
-    border: var(--button-bg) 0px solid;
-    border-radius: 1rem;
-}
-.button-box a {
-    color: var(--bg);
-    text-decoration: none;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Noto+Sans+JP:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+        :root {
+            --text: #000;
+            --bg: #fff;
+            --box-text: #000;
+            --box-bg: #eee;
+            --button-bg: #333;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #eee;
+                --bg: #000;
+                --box-text: #000;
+                --box-bg: #ccc;
+                --button-bg: #bbb;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Outfit", 'Noto Sans JP', sans-serif;
+            color: var(--text);
+        }
+
+        .display-none {
+            display: none;
+        }
+
+        body {
+            background-color: var(--bg);
+        }
+
+        a {
+            color: var(--text);
+        }
+
+        h2 {
+            font-family: 'Josefin Slab', 'Noto Sans JP';
+            font-weight: 700;
+            font-size: 1.8rem;
+            text-align: center;
+            margin: 2.4rem 0 0.6rem 0;
+        }
+
+        h3 {
+            font-weight: 600;
+            margin: 1.2rem 0 0.4rem 0;
+        }
+
+        audio {
+            margin-bottom: 0.4rem;
+        }
+
+        #header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 16px 0;
+        }
+
+        #profile_icon {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        #profile_icon img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #name {
+            margin: 0 16px;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        #detail {
+            text-align: center;
+            font-size: 1rem;
+            padding-bottom: 0.6rem;
+        }
+
+        #list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+            width: max(round(down, 100%, 380px), 380px);
+            margin: auto;
+            padding-bottom: 0.6rem;
+        }
+
+        .link {
+            background: var(--box-bg);
+            border-radius: 4px;
+            width: 364px;
+            margin: 8px 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ss,
+        .un,
+        .qx {
+            display: none;
+        }
+
+        .icon {
+            height: 32px;
+            width: 32px;
+            margin: 16px;
+            background-size: contain;
+        }
+
+        .twitter {
+            background-image: url('/images/x-logo-black.png');
+        }
+
+        .instagram {
+            background-image: url('/images/instagram-logo-black.png');
+        }
+
+        .discord {
+            background-image: url('/images/discord-logo-black.png');
+            background-repeat: no-repeat;
+            background-position-y: center;
+        }
+
+        .text {
+            height: 52px;
+            width: 288px;
+            margin: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .link_title {
+            font-weight: 600;
+        }
+
+        #list div,
+        a {
+            color: var(--box-text);
+        }
+
+        .work-box,
+        #tags {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: min(calc(100vw - 24px), 780px);
+            margin: 0.4rem auto 1.6rem;
+        }
+
+        .work-box h3 {
+            text-align: center;
+        }
+
+        #custom-break span {
+            display: inline-block;
+        }
+
+        .work-box h4 {
+            text-align: center;
+            font-weight: 500;
+            margin: 0.4rem 0 0.4rem 0;
+        }
+
+        .youtube_video {
+            width: min(calc(100vw - 32px), 772px);
+            height: calc((min(calc(100vw - 32px), 772px) - 8px) * 9 / 16);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .comment {
+            margin: 1.2rem 0.8rem 0.8em;
+        }
+
+        .button-box {
+            margin: 0.8rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            justify-content: center;
+        }
+
+        .button-box div {
+            font-size: 0.9rem;
+            padding: 0.2rem 0.8rem 0.3rem;
+            color: var(--bg);
+            background-color: var(--button-bg);
+            border: var(--button-bg) 0px solid;
+            border-radius: 1rem;
+        }
+
+        .button-box a {
+            color: var(--bg);
+            text-decoration: none;
+        }
     </style>
     <script>
         window.onload = function () {
@@ -204,6 +242,7 @@ audio {
         }
     </script>
 </head>
+
 <body>
     <header>
         <h1>
@@ -213,145 +252,161 @@ audio {
             </div>
         </h1>
         <h2>LINKS</h2>
-    <article>
-        <div id="list">
-            <div class="link">
-                <div class="icon discord"></div>
-                <div class="text">
-                    <div class="link_title">
-                        <a href="https://discord.gg/f38zhkXa2k" target="_blank noopener">Discord (my server)</a>
+        <article>
+
+            <div id="list">
+                <div class="link">
+                    <div class="icon discord"></div>
+                    <div class="text">
+                        <div class="link_title">
+                            <a href="https://discord.gg/f38zhkXa2k" target="_blank noopener">Discord (my server)</a>
+                        </div>
+                        <div class="description">いつでもどうぞ</div>
                     </div>
-                    <div class="description">いつでもどうぞ</div>
                 </div>
-            </div>
-            <div class="link ss">
-                <div class="icon instagram"></div>
-                <div class="text">
-                    <div class="link_title">
-                        <a href="https://www.instagram.com/qrf1d" target="_blank noopener">Instagram (@qrf1d)</a>
+                <div class="link un">
+                    <div class="icon instagram"></div>
+                    <div class="text">
+                        <div class="link_title">
+                            <a href="https://www.instagram.com/1221cs" target="_blank noopener">Instagram
+                                (@1221cs)</a>
+                        </div>
+                        <div class="description">大学垢</div>
                     </div>
-                    <div class="description">知り合いのみ</div>
                 </div>
-            </div>
-            <div class="link un">
-                <div class="icon instagram"></div>
-                <div class="text">
-                    <div class="link_title">
-                        <a href="https://www.instagram.com/56562cs" target="_blank noopener">Instagram (@56562cs)</a>
+                <div class="link ss">
+                    <div class="icon instagram"></div>
+                    <div class="text">
+                        <div class="link_title">
+                            <a href="https://www.instagram.com/qrf1d" target="_blank noopener">Instagram
+                                (@qrf1d)</a>
+                        </div>
+                        <div class="description">知り合いのみ</div>
                     </div>
-                    <div class="description">大学垢</div>
                 </div>
-            </div>
-            <div class="link un">
-                <div class="icon twitter"></div>
-                <div class="text">
-                    <div class="link_title">
-                        <a href="https://twitter.com/i/user/2028490019317653505" target="_blank noopener">X (@56562cs)</a>
+                <div class="link un">
+                    <div class="icon twitter"></div>
+                    <div class="text">
+                        <div class="link_title">
+                            <a href="https://twitter.com/i/user/2028490019317653505" target="_blank noopener">X
+                                (@56562cs)</a>
+                        </div>
+                        <div class="description">大学垢</div>
                     </div>
-                    <div class="description">大学垢</div>
                 </div>
-            </div>
-            <div class="link ss">
-                <div class="icon twitter"></div>
-                <div class="text">
-                    <div class="link_title">
-                        <a href="https://twitter.com/i/user/1463013592370868225" target="_blank noopener">X (@rekisou59ten)</a>
+                <div class="link ss">
+                    <div class="icon twitter"></div>
+                    <div class="text">
+                        <div class="link_title">
+                            <a href="https://twitter.com/i/user/1463013592370868225" target="_blank noopener">X
+                                (@rekisou59ten)</a>
+                        </div>
+                        <div class="description">高校垢</div>
                     </div>
-                    <div class="description">高校垢</div>
                 </div>
-            </div>
-            <div class="link qx">
-                <div class="icon twitter"></div>
-                <div class="text">
-                    <div class="link_title">
-                        <a href="https://twitter.com/i/user/1716132471585275904" target="_blank noopener">X (@qrtxas)</a>
+                <div class="link ss qx">
+                    <div class="icon twitter"></div>
+                    <div class="text">
+                        <div class="link_title">
+                            <a href="https://twitter.com/i/user/1716132471585275904" target="_blank noopener">X
+                                (@qrtxas)</a>
+                        </div>
+                        <div class="description">本垢 ここにいます</div>
                     </div>
-                    <div class="description">雑多垢</div>
                 </div>
-            </div>
-            <div class="link">
-                <div class="icon note"></div>
-                <div class="text">
-                    <div class="link_title">
-                        <a href="https://note.com/qrf1d" target="_blank noopener">note (@qrf1d)</a>
+                <div class="link ss">
+                    <div class="icon note"></div>
+                    <div class="text">
+                        <div class="link_title">
+                            <a href="https://note.com/qrf1d" target="_blank noopener">note (@qrf1d)</a>
+                        </div>
+                        <div class="description">めったに更新しない</div>
                     </div>
-                    <div class="description">めったに更新しない</div>
                 </div>
-            </div>
-            <div class="link">
-                <div class="icon line"></div>
-                <div class="text">
-                    <div class="link_title">
-                        <a href="https://lin.ee/ALuVq4j" target="_blank noopener">LINE (逆翻訳ぼっと)</a>
+                <div class="link">
+                    <div class="icon line"></div>
+                    <div class="text">
+                        <div class="link_title">
+                            <a href="https://lin.ee/ALuVq4j" target="_blank noopener">LINE (逆翻訳ぼっと)</a>
+                        </div>
+                        <div class="description">有限回翻訳して日本語を崩壊させる</div>
                     </div>
-                    <div class="description">有限回翻訳して日本語を崩壊させる</div>
                 </div>
-            </div>
-            <div class="link ss">
-                <div class="icon"></div>
-                <div class="text">
-                    <div class="link_title">
-                        <a href="https://m7-5.github.io/" target="_blank noopener">m7-5.github.io</a>
-                    </div>
-                    <div class="description">探究で制作したウェブアプリ</div>
-                </div>
-            </div>
-        </div>
-        <div id="works">
-            <h2>WORKS</h2>
-            <div class="work-box" id="sparkle">
-                <h3>
-                    <div id="custom-break"><span>「Sparkle」</span><span>（第40回蒼碧祭文化部門</span><span>テーマソング）</span></div>
-                </h3>
-                <h4>作曲・共編曲</h4>
-                <div class="youtube_video">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BaoDIcmG04E?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="comment">
-                    <div>
-                        <p>2025年度、記念すべき40回目の蒼碧祭文化部門のテーマソングとして作曲しました。曲もMVも最高なのでたくさん観て聴いてください！！</p>
-                    </div>
-                    <div class="button-box">
-                        <div><a href="https://youtu.be/BaoDIcmG04E" target="_blank noopener">YouTubeで観る</a></div>
-                        <div class="display-none"><a href="" target="_blank noopener">ストリーミングサービスで聴く（準備中）</a></div>
-                        <div><a href="https://ja.chordwiki.org/wiki/Sparkle+%28%E8%92%BC%E7%A2%A7%E7%A5%AD%E6%96%87%E5%8C%96%E9%83%A8%E9%96%80%E3%83%86%E3%83%BC%E3%83%9E%E3%82%BD%E3%83%B3%E3%82%B0%29" target="_blank noopener">コード譜を見る</a></div>
-                        <div><a href="https://big-up.style/0ObOfWV51w">配信サービスで聴く</a></div>
-                        <div><a href="#sparkle-demo">デモ音源を聴く</a></div>
-                        <div><a href="https://note.com/qrf1d/n/nc35bc58107ce" target="_blank noopener">noteで解説を読む</a></div>
+                <div class="link ss">
+                    <div class="icon"></div>
+                    <div class="text">
+                        <div class="link_title">
+                            <a href="https://m7-5.github.io/" target="_blank noopener">m7-5.github.io</a>
+                        </div>
+                        <div class="description">探究で制作したウェブアプリ</div>
                     </div>
                 </div>
             </div>
-            <div class="work-box" id="school-introduction">
-                <h3>学校紹介動画</h3>
-                <h4>作曲・編曲</h4>
-                <div class="youtube_video">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iQpAuTUqxQ4?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="comment">
-                    <div class="button-box">
-                        <div><a href="https://youtu.be/iQpAuTUqxQ4" target="_blank noopener">YouTubeで観る</a></div>
-                        <div><a href="https://ja.chordwiki.org/wiki/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%AB%8B%E7%9B%B8%E6%A8%A1%E5%8E%9F%E4%B8%AD%E7%AD%89%E6%95%99%E8%82%B2%E5%AD%A6%E6%A0%A1%E7%B4%B9%E4%BB%8B%E5%8B%95%E7%94%BB+2024" target="_blank noopener">コード譜を見る</a></div>
+            <div id="works">
+                <h2>WORKS</h2>
+                <div class="work-box" id="sparkle">
+                    <h3>
+                        <div id="custom-break"><span>「Sparkle」</span><span>（第40回蒼碧祭文化部門</span><span>テーマソング）</span></div>
+                    </h3>
+                    <h4>作曲・共編曲</h4>
+                    <div class="youtube_video">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BaoDIcmG04E?rel=0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="comment">
+                        <div>
+                            <p>2025年度、記念すべき40回目の蒼碧祭文化部門のテーマソングとして作曲しました。曲もMVも最高なのでたくさん観て聴いてください！！</p>
+                        </div>
+                        <div class="button-box">
+                            <div><a href="https://youtu.be/BaoDIcmG04E" target="_blank noopener">YouTubeで観る</a></div>
+                            <div class="display-none"><a href="" target="_blank noopener">ストリーミングサービスで聴く（準備中）</a></div>
+                            <div><a href="https://ja.chordwiki.org/wiki/Sparkle+%28%E8%92%BC%E7%A2%A7%E7%A5%AD%E6%96%87%E5%8C%96%E9%83%A8%E9%96%80%E3%83%86%E3%83%BC%E3%83%9E%E3%82%BD%E3%83%B3%E3%82%B0%29"
+                                    target="_blank noopener">コード譜を見る</a></div>
+                            <div><a href="https://big-up.style/0ObOfWV51w">配信サービスで聴く</a></div>
+                            <div><a href="#sparkle-demo">デモ音源を聴く</a></div>
+                            <div><a href="https://note.com/qrf1d/n/nc35bc58107ce"
+                                    target="_blank noopener">noteで解説を読む</a></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="work-box">
-                <!-- <h3 id="sparkle-prelude">「Sparkle」後夜祭 ver.</h3>
+                <div class="work-box" id="school-introduction">
+                    <h3>学校紹介動画</h3>
+                    <h4>作曲・編曲</h4>
+                    <div class="youtube_video">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iQpAuTUqxQ4?rel=0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="comment">
+                        <div class="button-box">
+                            <div><a href="https://youtu.be/iQpAuTUqxQ4" target="_blank noopener">YouTubeで観る</a></div>
+                            <div><a href="https://ja.chordwiki.org/wiki/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%AB%8B%E7%9B%B8%E6%A8%A1%E5%8E%9F%E4%B8%AD%E7%AD%89%E6%95%99%E8%82%B2%E5%AD%A6%E6%A0%A1%E7%B4%B9%E4%BB%8B%E5%8B%95%E7%94%BB+2024"
+                                    target="_blank noopener">コード譜を見る</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-box">
+                    <!-- <h3 id="sparkle-prelude">「Sparkle」後夜祭 ver.</h3>
                 <h4>Prelude</h4>
                 <audio controls src="/music/Sparkle-live-intro.mp3" type="audio/mp3"></audio> -->
-                <h3 id="sparkle-demo">「Sparkle」</h3>
-                <h4>Instrumental（打ち込み音源）</h4>
-                <audio controls src="/music/Sparkle-midi-inst.mp3" type="audio/mp3"></audio>
-                <h3>ボツ曲供養コーナー</h3>
-                <audio controls src="/music/KeyE-171-4536.wav" type="audio/wav"></audio>
-                <audio controls src="/music/KeyGb-180-136.wav" type="audio/wav"></audio>
+                    <h3 id="sparkle-demo">「Sparkle」</h3>
+                    <h4>Instrumental（打ち込み音源）</h4>
+                    <audio controls src="/music/Sparkle-midi-inst.mp3" type="audio/mp3"></audio>
+                    <h3>ボツ曲供養コーナー</h3>
+                    <audio controls src="/music/KeyE-171-4536.wav" type="audio/wav"></audio>
+                    <audio controls src="/music/KeyGb-180-136.wav" type="audio/wav"></audio>
+                </div>
             </div>
-        </div>
-        <div id="tags">
-            <h2>TAGS</h2>
-            <div>#YOASOBI</div>
-            <div>#DTM</div>
-            <div>#TypeDesign</div>
-        </div>
-    </article>
+            <div id="tags">
+                <h2>TAGS</h2>
+                <div>#YOASOBI</div>
+                <div>#DTM</div>
+                <div>#TypeDesign</div>
+            </div>
+        </article>
 </body>
+
 </html>
