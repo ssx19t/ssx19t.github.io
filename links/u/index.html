@@ -11,7 +11,7 @@
     <h1>学籍確認システム</h1>
     <p>あなたの大学用メールアドレスの一部を，以下の指示の通り入力してください．</p>
     <ul>
-        <li>1つ目の空欄には，@以前の文字列の最初4文字を入力してください．</li>
+        <li>1つ目の空欄には，@以前の文字列の<b>最初4文字</b>を入力してください．</li>
         <li>2つ目の空欄には，@以降のドメイン名の文字列全体を入力してください．</li>
     </ul>
     <input type="text" id="gakuseki" name="gakuseki" required minlength="4" maxlength="4" size="4">***@<input
@@ -21,7 +21,7 @@
     <hr>
     <div id="result"></div>
     <footer>
-        <p>© qrtxas 2026</p>
+        <p>© qrf1d 2026</p>
     </footer>
 
     <script>
@@ -39,7 +39,7 @@
                 if (data.auth == 1) {
                     showResult('<a href="' + data.url + '">サイトに進む</a>')
                 } else if (data.auth == 0) {
-                    showResult('認証に失敗しました．もう一度やり直すか，サイトの管理者に直接連絡してください．')
+                    showResult('認証に失敗しました．時間を空けてもう一度やり直すか，サイトの管理者に直接連絡してください．')
                 }
                 return data;
             }
