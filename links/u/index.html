@@ -1,8 +1,52 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Redirecting to https://q59r.github.io/links/?u=1</title>
-    <meta http-equiv="refresh" content="0; URL=https://q59r.github.io/links/?u=1">
-    <link rel="canonical" href="https://q59r.github.io/links/?u=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学籍確認システム</title>
 </head>
+
+<body>
+    <h1>学籍確認システム</h1>
+    <p>あなたの大学用メールアドレスの一部を，以下の指示の通り入力してください．</p>
+    <ul>
+        <li>1つ目の空欄には，@以前の文字列の最初4文字を入力してください．</li>
+        <li>2つ目の空欄には，@以降のドメイン名の文字列全体を入力してください．</li>
+    </ul>
+    <input type="text" id="gakuseki" name="gakuseki" required minlength="4" maxlength="4" size="4">***@<input
+        type="text" id="domain" name="domain" required minlength="4" maxlength="30" size="12">
+    <hr>
+    <input type="button" value="進む" id="button">
+    <hr>
+    <div id="result"></div>
+
+    <script>
+        function buttonClick() {
+            const showResult = (htmlText) => {
+                document.getElementById('result').innerHTML = htmlText;
+            }
+            showResult('認証中です…');
+            const callApi = async (n, m) => {
+                const apiUrl = 'https://script.google.com/macros/s/AKfycbxx4YMJAMl-CJHC1HTJ7Hei7RWKbcCS9xS-CKsgC_oLdCTh_z94_ET_WgMHsngpddmP/exec?n=' + n + '&m=' + m;
+                console.log([apiUrl, n, m]);
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                console.log(data);
+                if (data.auth == 1) {
+                    showResult('<a href="' + data.url + '">サイトに進む</a>')
+                } else if (data.auth == 0) {
+                    showResult('認証に失敗しました．もう一度やり直すか，サイトの管理者に直接連絡してください．')
+                }
+                return data;
+            }
+            let gakuseki = document.getElementById('gakuseki').value;
+            let domain = document.getElementById('domain').value;
+            callApi(gakuseki, domain);
+
+        }
+        button.addEventListener('click', buttonClick);
+    </script>
+</body>
+
 </html>
