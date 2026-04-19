@@ -39,7 +39,9 @@
                 if (data.auth == 1) {
                     showResult('<a href="' + data.url + '">サイトに進む</a>')
                 } else if (data.auth == 0) {
-                    showResult('認証に失敗しました．時間を空けてもう一度やり直すか，サイトの管理者に直接連絡してください．')
+                    showResult('不適切な文字列が送信されたため，認証に失敗しました．時間を空けてもう一度やり直すか，サイトの管理者に直接連絡してください．')
+                } else if (data.auth == -1) {
+                    showResult('接続がタイムアウトしたため，認証に失敗しました．時間を空けてもう一度やり直してください．')
                 }
                 return data;
             }
